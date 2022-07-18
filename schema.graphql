@@ -1,0 +1,24 @@
+type Day @entity {
+  id: ID!
+  amountBurned: BigInt!
+  vaultBalance: BigInt!
+}
+
+type Proposal @entity {
+	id: ID!
+	proposer: Bytes!
+	target: Bytes!
+	startTime: BigInt!
+	endTime: BigInt!
+	description: String!
+	executed: Boolean!
+	extended: Boolean!
+	forVotes: BigInt!
+	againstVotes: BigInt!
+}
+
+type Delegation @entity {
+	id: ID!
+	delegatee: Bytes
+	delegator: Bytes!
+}
